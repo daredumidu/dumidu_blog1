@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post • Minimal Blog</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title"><a href="index.html">Minimal Blog</a></h1>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article id="post-content" class="post">
+      <div id="post-meta" class="post-meta"></div>
+      <div id="post-body" class="post-body">Loading...</div>
+    </article>
+  </main>
+
+  <footer class="container footer">
+    <small>Minimal Blog • Hosted on GitHub Pages</small>
+  </footer>
+
+  <!-- marked.js (for markdown -> HTML) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    // Render current post from query parameter ?post=posts/filename.md
+    (function () {
+      const params = new URLSearchParams(location.search);
+      const postPath = params.get('post');
+      if (!postPath) {
+        // No post specified: redirect to home
+        location.href = 'index.html';
+        return;
+      }
+      window.renderPostFromPath(postPath);
+    })();
+  </script>
+</body>
+</html>

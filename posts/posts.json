@@ -1,0 +1,14 @@
+[
+  {
+    "file": "posts/2025-10-15-hello.md",
+    "title": "Hello Minimal Blog",
+    "date": "2025-10-15",
+    "excerpt": "Welcome to the minimalist blog — first post."
+  },
+  {
+    "file": "posts/2025-10-15-second.md",
+    "title": "Second Post",
+    "date": "2025-10-15",
+    "excerpt": "A tiny follow-up post."
+  }
+]

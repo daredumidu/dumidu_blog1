@@ -1,0 +1,35 @@
+/* Minimalist blog styles */
+:root{
+  --max-width: 720px;
+  --accent: #0b5cff;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --text: #111827;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Helvetica Neue", monospace;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; margin:0; background:var(--bg); color:var(--text); line-height:1.6}
+.container{max-width:var(--max-width); margin:0 auto; padding:1rem}
+.site-header{border-bottom:1px solid #eee; background:transparent}
+.site-title{font-size:1.1rem; margin:0; display:inline-block}
+.site-title a{color:var(--text); text-decoration:none}
+.nav{float:right}
+.nav-link{color:var(--accent); text-decoration:none; font-weight:600}
+.nav-link:hover{text-decoration:underline}
+h2{margin-top:1.25rem}
+#posts{display:flex; flex-direction:column; gap:.6rem; margin-top:.6rem}
+.post-item{padding:.6rem .8rem; border:1px solid #f0f0f0; border-radius:6px; transition:background .15s; background:#fff}
+.post-item:hover{background:#fafafa}
+.post-item a{color:var(--text); text-decoration:none; display:block}
+.post-meta{color:var(--muted); font-size:.9rem; margin-bottom:.6rem}
+.post-body{margin-top:1rem}
+.post img{max-width:100%}
+.code{font-family:var(--mono); background:#f7f7fb; padding:.2rem .4rem; border-radius:4px; font-size:.95em}
+.footer{margin-top:2rem; padding:1rem 0; border-top:1px solid #eee; color:var(--muted); text-align:center; font-size:.9rem}
+
+/* Responsive tweaks */
+@media (max-width:640px){
+  .nav{float:none; margin-top:.5rem}
+  .container{padding:.8rem}
+}
