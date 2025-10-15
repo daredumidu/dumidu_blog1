@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "welcome",
+    "title": "Welcome to the Minimalist Blog",
+    "date": "2025-10-15",
+    "excerpt": "A tiny static blog using Markdown files and GitHub Pages.",
+    "filename": "welcome.md"
+  },
+  {
+    "slug": "second-post",
+    "title": "Second Post",
+    "date": "2025-10-15",
+    "excerpt": "Another example post to show multiple entries.",
+    "filename": "second-post.md"
+  }
+]
